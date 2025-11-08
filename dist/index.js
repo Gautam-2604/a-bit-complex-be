@@ -6,7 +6,6 @@ const PORT = process.env.PORT || 3000;
 const prisma = new PrismaClient();
 const app = express();
 app.use(express.json());
-// Home endpoint
 app.get('/', (req, res) => {
     res.json({
         message: "Welcome to the DevOps API",
@@ -30,7 +29,6 @@ app.get('/health', (req, res) => {
         database: "connected"
     });
 });
-// Get all users endpoint
 app.get('/users', async (req, res) => {
     try {
         const users = await prisma.user.findMany();
