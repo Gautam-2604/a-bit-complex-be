@@ -29,7 +29,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ secrets.DOCKER_HUB_USERNAME }}/new-be-devops
+          images: ${{ secrets.DOCKER_USERNAME }}/complex-be
           tags: |
             type=ref,event=branch
             type=ref,event=pr
